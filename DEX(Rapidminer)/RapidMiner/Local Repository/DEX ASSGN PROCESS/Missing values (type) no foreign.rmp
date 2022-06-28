@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.10.000">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.10.000" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="retrieve" compatibility="9.10.000" expanded="true" height="68" name="Retrieve netflix_titles (no foreign)" width="90" x="45" y="238">
+        <parameter key="repository_entry" value="../data/netflix_titles (no foreign)"/>
+      </operator>
+      <operator activated="true" class="multiply" compatibility="9.10.000" expanded="true" height="103" name="Multiply" width="90" x="179" y="238"/>
+      <operator activated="true" class="filter_examples" compatibility="9.10.000" expanded="true" height="103" name="Filter Examples (both empty)" width="90" x="849" y="493">
+        <parameter key="parameter_expression" value=""/>
+        <parameter key="condition_class" value="custom_filters"/>
+        <parameter key="invert_filter" value="false"/>
+        <list key="filters_list">
+          <parameter key="filters_entry_key" value="type.is_missing."/>
+        </list>
+        <parameter key="filters_logic_and" value="true"/>
+        <parameter key="filters_check_metadata" value="true"/>
+      </operator>
+      <operator activated="true" class="filter_examples" compatibility="9.10.000" expanded="true" height="103" name="Filter Examples" width="90" x="313" y="136">
+        <parameter key="parameter_expression" value=""/>
+        <parameter key="condition_class" value="custom_filters"/>
+        <parameter key="invert_filter" value="false"/>
+        <list key="filters_list">
+          <parameter key="filters_entry_key" value="type.is_not_missing."/>
+        </list>
+        <parameter key="filters_logic_and" value="true"/>
+        <parameter key="filters_check_metadata" value="true"/>
+      </operator>
+      <operator activated="true" class="multiply" compatibility="9.10.000" expanded="true" height="103" name="Multiply (2)" width="90" x="447" y="34"/>
+      <operator activated="true" class="filter_examples" compatibility="9.10.000" expanded="true" height="103" name="Filter Examples (all ex with type have at least 1 attribute filled)" width="90" x="715" y="289">
+        <parameter key="parameter_expression" value=""/>
+        <parameter key="condition_class" value="custom_filters"/>
+        <parameter key="invert_filter" value="false"/>
+        <list key="filters_list">
+          <parameter key="filters_entry_key" value="duration_minutes.is_missing."/>
+          <parameter key="filters_entry_key" value="duration_seasons.is_missing."/>
+        </list>
+        <parameter key="filters_logic_and" value="true"/>
+        <parameter key="filters_check_metadata" value="true"/>
+      </operator>
+      <operator activated="true" class="replace_missing_values" compatibility="9.10.000" expanded="true" height="103" name="Replace Missing Values" width="90" x="648" y="34">
+        <parameter key="return_preprocessing_model" value="false"/>
+        <parameter key="create_view" value="false"/>
+        <parameter key="attribute_filter_type" value="subset"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value="duration_minutes|duration_seasons"/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="text"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="default" value="zero"/>
+        <list key="columns"/>
+        <parameter key="replenishment_value" value="0"/>
+      </operator>
+      <operator activated="true" class="append" compatibility="9.10.000" expanded="true" height="103" name="Append" width="90" x="782" y="136">
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+        <parameter key="merge_type" value="all"/>
+      </operator>
+      <operator activated="true" class="filter_examples" compatibility="9.10.000" expanded="true" height="103" name="Filter Examples (4)" width="90" x="916" y="34">
+        <parameter key="parameter_expression" value=""/>
+        <parameter key="condition_class" value="no_missing_attributes"/>
+        <parameter key="invert_filter" value="false"/>
+        <list key="filters_list"/>
+        <parameter key="filters_logic_and" value="true"/>
+        <parameter key="filters_check_metadata" value="true"/>
+      </operator>
+      <connect from_op="Retrieve netflix_titles (no foreign)" from_port="output" to_op="Multiply" to_port="input"/>
+      <connect from_op="Multiply" from_port="output 1" to_op="Filter Examples" to_port="example set input"/>
+      <connect from_op="Multiply" from_port="output 2" to_op="Filter Examples (both empty)" to_port="example set input"/>
+      <connect from_op="Filter Examples (both empty)" from_port="example set output" to_port="result 3"/>
+      <connect from_op="Filter Examples" from_port="example set output" to_op="Multiply (2)" to_port="input"/>
+      <connect from_op="Filter Examples" from_port="unmatched example set" to_op="Append" to_port="example set 2"/>
+      <connect from_op="Multiply (2)" from_port="output 1" to_op="Replace Missing Values" to_port="example set input"/>
+      <connect from_op="Multiply (2)" from_port="output 2" to_op="Filter Examples (all ex with type have at least 1 attribute filled)" to_port="example set input"/>
+      <connect from_op="Filter Examples (all ex with type have at least 1 attribute filled)" from_port="example set output" to_port="result 2"/>
+      <connect from_op="Replace Missing Values" from_port="example set output" to_op="Append" to_port="example set 1"/>
+      <connect from_op="Append" from_port="merged set" to_op="Filter Examples (4)" to_port="example set input"/>
+      <connect from_op="Filter Examples (4)" from_port="example set output" to_port="result 1"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+      <portSpacing port="sink_result 3" spacing="0"/>
+      <portSpacing port="sink_result 4" spacing="0"/>
+    </process>
+  </operator>
+</process>
