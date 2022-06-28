@@ -1,0 +1,43 @@
+,year,full_model_name,model_name,price,distance_travelled(kms),fuel_type,city
+2,2017,Toyota Fortuner 2.8 4x2 MT [2016-2020],Fortuner,2650000,64593,Diesel,Thane
+4,2012,Hyundai Verna Fluidic 1.6 CRDi SX,Verna,475000,23800,Diesel,Mumbai
+5,2012,Hyundai i20 Sportz 1.2 BS-IV,i20,335000,45000,Petrol,Mumbai
+11,2016,Toyota Innova Crysta 2.4 G 7 STR [2016-2017],Innova,1485000,59758,Diesel,Mumbai
+16,2016,Toyota Corolla Altis VL AT Petrol,Corolla,1035000,97679,Petrol,Mumbai
+83,2021,Hyundai Creta SX (O) 1.5 Diesel Automatic,Creta,2095000,7500,Diesel,Mumbai
+85,2021,Hyundai Creta SX (O) 1.4 Turbo 7 DCT Dual Tone,Creta,2050000,4500,Petrol,Mumbai
+103,2010,Toyota Corolla Altis 1.8 G,Corolla,0,46000,Petrol,Mumbai
+106,2017,Toyota Innova Crysta 2.4 G 7 STR [2016-2017],Innova,1575000,60000,Diesel,Mumbai
+107,2014,Toyota Innova 2.5 EV PS 7 STR BS-IV,Innova,950000,91000,Diesel,Mumbai
+112,2016,Hyundai Creta 1.6 SX Plus AT Petrol,Creta,1090000,39000,Petrol,Mumbai
+118,2017,Toyota Innova Crysta 2.8 GX AT 8 STR [2016-2020],Innova,1760000,56089,Diesel,Thane
+123,2013,Toyota Fortuner 2.5 Sportivo 4x2 MT,Fortuner,1451000,118363,Diesel,Thane
+124,2015,Hyundai i20 Active 1.2 SX,i20,525000,98877,Petrol,Thane
+142,2018,Hyundai i20 Active 1.4 S,i20,790000,42000,Diesel,Mumbai
+164,2009,Toyota Innova 2.5 V 8 STR,Innova,525000,65000,Diesel,Mumbai
+165,2015,Toyota Innova 2.5 G BS IV 7 STR,Innova,1050000,18000,Diesel,Mumbai
+168,2020,Hyundai Creta SX (O) 1.5 Diesel Automatic,Creta,1990000,7800,Diesel,Mumbai
+174,2017,Hyundai Creta SX Plus 1.6 Petrol,Creta,995000,38000,Petrol,Mumbai
+177,2017,Hyundai Creta SX Plus 1.6 Petrol,Creta,995000,38000,Petrol,Mumbai
+178,2009,Toyota Innova 2.5 V 8 STR,Innova,525000,65000,Diesel,Mumbai
+181,2020,Hyundai Creta SX (O) 1.5 Diesel Automatic,Creta,1990000,7800,Diesel,Mumbai
+182,,Hyundai Creta SX (O) 1.4 Turbo 7 DCT,Creta,2025000,9000,,
+184,2019,Hyundai Creta 1.6 SX Plus Petrol,Creta,1550000,10500,Petrol,Navi Mumbai
+189,2017,Hyundai Verna 1.6 VTVT S,Verna,675000,31414,Petrol,Mumbai
+191,2013,Hyundai i10 Sportz 1.2 Kappa2,i10,325000,29708,Petrol,Mumbai
+193,,,Innova,1030000,156334,,Thane
+204,2014,Toyota Innova 2.5 VX 7 STR BS-III,Innova,975000,150116,Diesel,Thane
+208,2016,Hyundai Creta 1.6 SX Plus AT,Creta,1145000,56839,Diesel,Thane
+209,2012,Hyundai i10 Era 1.1 iRDE2 [2010-2017],i10,315000,34600,Petrol,Thane
+213,2012,Hyundai i20 Sportz 1.4 CRDI,i20,349000,84000,Diesel,Navi Mumbai
+216,2016,Toyota Corolla Altis VL AT Petrol,Corolla,1095000,31552,Petrol,Thane
+217,2015,Hyundai Verna Fluidic 1.6 VTVT SX Opt AT,Verna,725000,37399,Petrol,Thane
+218,2012,Toyota Innova 2.5 G4 7 STR,Innova,765000,158359,Diesel,Thane
+221,2017,Hyundai Creta 1.6 SX Plus AT Petrol,Creta,1195000,30958,Petrol,Thane
+230,2017,Hyundai Creta 1.6 SX Plus AT Petrol,Creta,1100000,43100,Petrol,Mumbai
+235,2009,Hyundai Verna VGT CRDi SX ABS,Verna,197000,98000,Diesel,Mumbai
+242,2015,Hyundai i20 Active 1.4L SX (O) [2015-2016],i20,695000,30000,Diesel,Mumbai
+135,2014,Toyota Etios Liva G SP*,Etios,0,31913,Petrol,Thane
+192,2012,Toyota Etios G,Etios,375000,40200,,Thane
+215,2015,Toyota Etios Cross 1.2 G,Etios,499000,39792,,Thane
+239,2012,Toyota Etios Liva V,Etios,325000,54215,Petrol,Mumbai
