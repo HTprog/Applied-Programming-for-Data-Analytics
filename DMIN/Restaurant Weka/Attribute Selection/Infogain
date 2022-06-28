@@ -1,0 +1,255 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.FilteredClassifier -F "weka.filters.MultiFilter -F \"weka.filters.unsupervised.attribute.StringToWordVector -R first-last -W 1000 -prune-rate -1.0 -N 0 -L -stemmer weka.core.stemmers.NullStemmer -stopwords-handler weka.core.stopwords.Null -M 1 -tokenizer \\\"weka.core.tokenizers.WordTokenizer -delimiters \\\\\\\" \\\\\\\\r\\\\\\\\n\\\\\\\\t.,;:\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\"()?!\\\\\\\"\\\"\" -F \"weka.filters.supervised.attribute.AttributeSelection -E \\\"weka.attributeSelection.InfoGainAttributeEval \\\" -S \\\"weka.attributeSelection.Ranker -T 0.0 -N -1\\\"\"" -S 1 -W weka.classifiers.bayes.NaiveBayesMultinomial
+Relation:     Restaurant_Reviews (No Special)-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.NominalToString-Cfirst-weka.filters.unsupervised.instance.RemovePercentage-P70.0-V
+Instances:    700
+Attributes:   2
+              Review
+              Liked
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+FilteredClassifier using weka.classifiers.bayes.NaiveBayesMultinomial  on data filtered through weka.filters.MultiFilter -F "weka.filters.unsupervised.attribute.StringToWordVector -R 1 -W 1000 -prune-rate -1.0 -N 0 -L -stemmer weka.core.stemmers.NullStemmer -stopwords-handler weka.core.stopwords.Null -M 1 -tokenizer \"weka.core.tokenizers.WordTokenizer -delimiters \\\" \\\\r\\\\n\\\\t.,;:\\\\\\\'\\\\\\\"()?!\\\"\"" -F "weka.filters.supervised.attribute.AttributeSelection -E \"weka.attributeSelection.InfoGainAttributeEval \" -S \"weka.attributeSelection.Ranker -T 0.0 -N -1\""
+
+Filtered Header
+@relation 'Restaurant_Reviews (No Special)-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.unsupervised.attribute.NominalToString-Cfirst-weka.filters.unsupervised.instance.RemovePercentage-P70.0-V-weka.filters.unsupervised.attribute.StringToWordVector-R1-W1000-prune-rate-1.0-N0-L-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M1-tokenizerweka.core.tokenizers.WordTokenizer -delimiters \" \\r\\n\\t.,;:\\\'\\\"()?!\"-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.InfoGainAttributeEval-Sweka.attributeSelection.Ranker -T 0.0 -N -1-weka.filters.MultiFilter-Fweka.filters.unsupervised.attribute.StringToWordVector -R 1 -W 1000 -prune-rate -1.0 -N 0 -L -stemmer weka.core.stemmers.NullStemmer -stopwords-handler weka.core.stopwords.Null -M 1 -tokenizer \"weka.core.tokenizers.WordTokenizer -delimiters \\\" \\\\r\\\\n\\\\t.,;:\\\\\\\'\\\\\\\"()?!\\\"\"-Fweka.filters.supervised.attribute.AttributeSelection -E \"weka.attributeSelection.InfoGainAttributeEval \" -S \"weka.attributeSelection.Ranker -T 0.0 -N -1\"'
+
+@attribute great numeric
+@attribute not numeric
+@attribute delicious numeric
+@attribute minutes numeric
+@attribute good numeric
+@attribute dont numeric
+@attribute bad numeric
+@attribute never numeric
+@attribute there numeric
+@attribute amazing numeric
+@attribute to numeric
+@attribute fantastic numeric
+@attribute is numeric
+@attribute wasnt numeric
+@attribute bland numeric
+@attribute waited numeric
+@attribute friendly numeric
+@attribute being numeric
+@attribute nice numeric
+@attribute loved numeric
+@attribute took numeric
+@attribute slow numeric
+@attribute worst numeric
+@attribute excellent numeric
+@attribute i numeric
+@attribute and numeric
+@attribute either numeric
+@attribute 10 numeric
+@attribute cold numeric
+@attribute probably numeric
+@attribute rude numeric
+@attribute hour numeric
+@attribute management numeric
+@attribute getting numeric
+@attribute hard numeric
+@attribute prices numeric
+@attribute got numeric
+@attribute going numeric
+@attribute no numeric
+@attribute up numeric
+@attribute really numeric
+@attribute that numeric
+@attribute clean numeric
+@attribute tender numeric
+@attribute spot numeric
+@attribute wonderful numeric
+@attribute happy numeric
+@attribute town numeric
+@attribute cooked numeric
+@attribute think numeric
+@attribute another numeric
+@attribute love numeric
+@attribute tables numeric
+@attribute zero numeric
+@attribute horrible numeric
+@attribute location numeric
+@attribute sick numeric
+@attribute she numeric
+@attribute waste numeric
+@attribute 30 numeric
+@attribute avoid numeric
+@attribute terrible numeric
+@attribute anytime numeric
+@attribute waiting numeric
+@attribute perfect numeric
+@attribute awesome numeric
+@attribute server numeric
+@attribute while numeric
+@attribute ambiance numeric
+@attribute money numeric
+@attribute 1 numeric
+@attribute least numeric
+@attribute look numeric
+@attribute unless numeric
+@attribute totally numeric
+@attribute mediocre numeric
+@attribute total numeric
+@attribute poor numeric
+@attribute pay numeric
+@attribute business numeric
+@attribute star numeric
+@attribute none numeric
+@attribute sucks numeric
+@attribute tasteless numeric
+@attribute impressed numeric
+@attribute asked numeric
+@attribute disappointing numeric
+@attribute family numeric
+@attribute dishes numeric
+@attribute incredible numeric
+@attribute steaks numeric
+@attribute bacon numeric
+@attribute check numeric
+@attribute reasonable numeric
+@attribute sweet numeric
+@attribute dessert numeric
+@attribute Liked {0,1}
+
+@data
+
+
+Classifier Model
+The independent probability of a class
+--------------------------------------
+0	0.44
+1	0.56
+
+The probability of a word given the class
+-----------------------------------------
+	0	1	
+great	0	0.06	
+not	0.07	0.02	
+delicious	0	0.03	
+minutes	0.02	0	
+good	0.02	0.07	
+dont	0.02	0	
+bad	0.01	0	
+never	0.02	0	
+there	0.02	0.01	
+amazing	0	0.02	
+to	0.09	0.06	
+fantastic	0	0.01	
+is	0.04	0.09	
+wasnt	0.01	0	
+bland	0.01	0	
+waited	0.01	0	
+friendly	0	0.02	
+being	0.01	0	
+nice	0	0.02	
+loved	0	0.01	
+took	0.01	0	
+slow	0.01	0	
+worst	0.01	0	
+excellent	0	0.01	
+i	0.11	0.09	
+and	0.1	0.18	
+either	0.01	0	
+10	0.01	0	
+cold	0.01	0	
+probably	0.01	0	
+rude	0.01	0	
+hour	0.01	0	
+management	0.01	0	
+getting	0.01	0	
+hard	0.01	0	
+prices	0	0.01	
+got	0.01	0	
+going	0.01	0	
+no	0.01	0	
+up	0.02	0.01	
+really	0.01	0.02	
+that	0.04	0.02	
+clean	0	0.01	
+tender	0	0.01	
+spot	0	0.01	
+wonderful	0	0.01	
+happy	0	0.01	
+town	0	0.01	
+cooked	0	0.01	
+think	0.01	0	
+another	0.01	0	
+love	0	0.01	
+tables	0.01	0	
+zero	0.01	0	
+horrible	0.01	0	
+location	0.01	0	
+sick	0.01	0	
+she	0.01	0	
+waste	0.01	0	
+30	0.01	0	
+avoid	0.01	0	
+terrible	0.01	0	
+anytime	0.01	0	
+waiting	0.01	0	
+perfect	0	0.01	
+awesome	0	0.01	
+server	0	0.01	
+while	0	0.01	
+ambiance	0	0.01	
+money	0	0	
+1	0	0	
+least	0	0	
+look	0	0	
+unless	0	0	
+totally	0	0	
+mediocre	0	0	
+total	0	0	
+poor	0	0	
+pay	0	0	
+business	0	0	
+star	0	0	
+none	0	0	
+sucks	0	0	
+tasteless	0	0	
+impressed	0	0	
+asked	0	0	
+disappointing	0	0	
+family	0	0.01	
+dishes	0	0.01	
+incredible	0	0.01	
+steaks	0	0.01	
+bacon	0	0.01	
+check	0	0.01	
+reasonable	0	0.01	
+sweet	0	0.01	
+dessert	0	0.01	
+
+
+Time taken to build model: 0.4 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         255               85      %
+Incorrectly Classified Instances        45               15      %
+Kappa statistic                          0.693 
+Mean absolute error                      0.2338
+Root mean squared error                  0.3169
+Relative absolute error                 47.328  %
+Root relative squared error             63.678  %
+Total Number of Instances              300     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.763    0.079    0.888      0.763    0.821      0.699    0.939     0.928     0
+                 0.921    0.237    0.826      0.921    0.871      0.699    0.939     0.946     1
+Weighted Avg.    0.850    0.166    0.854      0.850    0.848      0.699    0.939     0.938     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 103  32 |   a = 0
+  13 152 |   b = 1
+
