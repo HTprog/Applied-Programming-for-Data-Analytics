@@ -1,0 +1,5 @@
+name=input("What is your name? ")
+letter=input("Which letter do you want to replace? ")
+new=input("Which letter do you want to replace it with? ")
+newName=name.replace(letter,new)
+print("Your new name is "+newName)

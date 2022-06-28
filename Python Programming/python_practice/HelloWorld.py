@@ -1,0 +1,1 @@
+print("World war 1 begun in 1914 and ended in 1918.\n""The war ended",2021-1918,"years ago.")

@@ -1,0 +1,5 @@
+firstname=input("What is your first name? ")
+lastname=input("What is your last name? ")
+full=(firstname+" "+lastname).title()
+length=len(firstname+lastname)
+print("Hello "+full+". Your name contains",length,"letters")

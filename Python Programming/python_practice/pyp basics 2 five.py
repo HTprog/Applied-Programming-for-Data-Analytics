@@ -1,0 +1,6 @@
+Name=input("What is your name? ")
+Age=int(input("What is your age? "))
+Country=input("What country do you live in? ")
+sport=input("What's your favorite sport? ")
+film=input("What's your favorite film? ")
+print("Well "+Name+" I know you are",Age,"years old, you live in "+Country+", your favorite sport is "+sport+" and your favorite film is "+film+".")
